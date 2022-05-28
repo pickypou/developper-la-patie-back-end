@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="{{asset('assets/css/home.css')}}">
 
     <h1>Bienvenue sur trt</h1>
-    <a href=""><button>s'incrire</button></a>
-    <a href=""><button>connexion</button></a>
+    <a href="{{path('app_register')}}"><button>s'incrire</button></a>
+
+    <a href="{{path('app_login')}}"><button>connexion candidat</button></a>
+    <a href="{{path('app_login')}}"><button>connexion recruteur</button></a>
 {%endblock%}
