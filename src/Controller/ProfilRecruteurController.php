@@ -17,20 +17,20 @@ class ProfilRecruteurController extends AbstractController
     {
         $this ->entityManager = $entityManager;
     }
-    #[Route('/profil/recruteur', name: 'app_profil_recruteur')]
+    #[Route('/recruteur/profil', name: 'app_profil_recruteur')]
     public function index(Request $request): Response
     {
         $recruteur = new Recruteur();
         $form = $this->createForm(RecruteurType::class, $recruteur);
         $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()){
+        if($form->isSubmitted() && $form->isValid()){
             $recruteur->setUser($this->getUser());
-
             $this->entityManager->persist($recruteur);
             $this->entityManager->flush();
-            $this->redirectToRoute('app_recruteur_account');
+            return $this->redirectToRoute('app_recruteur_account');
         }
-        return $this->render('account/recruteur.html.twig',[
+
+        return $this->render('connexion/recruteur.html.twig',[
             'form'=>$form->createView()
         ]);
     }

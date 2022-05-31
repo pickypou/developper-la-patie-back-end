@@ -5,35 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d50193-ddbc-452c-ae5d-cc3c37acd656" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/developper-la-patie-back-end.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/Bootstrap/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/general.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ProfilRecruteurController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Recruteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/RecruteurType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/RecruteurRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/candidat.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/userAccount.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/developper-la-partie-back-end.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/connexion/candidat.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/connexion/recruteur.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/885669ea-7f46-4fc2-8193-6151ec8f16ba.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/885669ea-7f46-4fc2-8193-6151ec8f16ba.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/developper-la-patie-back-end.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/developper-la-patie-back-end.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AccountController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProfilCandidatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfilCandidatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProfilRecruteurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfilRecruteurController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Candidat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Candidat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Recruteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Recruteur.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/CandidatType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CandidatType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RecruteurType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RecruteurType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthentificatorAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthentificatorAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/candidat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/candidat.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/account/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/account/recruteur.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/recruteur.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/userAccount.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/account.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profil_candidat/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +119,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
     </include_path>
   </component>
   <component name="ProjectId" id="29rtLqPvAau0hob7UysggLUsXQp" />
@@ -152,6 +150,12 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\spyss\OneDrive\Bureau\developper-la-patie-back-end\templates\connexion" />
+      <recent name="C:\Users\spyss\OneDrive\Bureau\developper-la-patie-back-end\templates\home" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -162,7 +166,8 @@
       <updated>1653882989029</updated>
       <workItem from="1653882994275" duration="3170000" />
       <workItem from="1653896693582" duration="10851000" />
-      <workItem from="1653980830675" duration="2174000" />
+      <workItem from="1653980830675" duration="10826000" />
+      <workItem from="1654000932188" duration="9035000" />
     </task>
     <servers />
   </component>

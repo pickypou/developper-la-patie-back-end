@@ -3,9 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Candidat;
-use App\Entity\Recruteur;
 use App\Form\CandidatType;
-use App\Form\RecruteurType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -27,13 +25,28 @@ class ProfilCandidatController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){
+            $cv = $form->getCv()->getData();
+            if ($cv){
+                $brochureFile = pathinfo($cv->getUser(),PATHINFO_FILENAME);
+                $newFilename = $brochureFile.'-'.uniqid().'.'.$brochureFile->guessExtension();
+                try {
+                    $cv->move(
+                        $this->getParameter('brochures_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    $cv->setCv($newFilename);
+                }
+
+            }
+
             $candidat->setUser($this->getUser());
             $this->entityManager->persist($candidat);
             $this->entityManager->flush();
-            $this->redirectToRoute('app_candidat_account');
+            return $this->redirectToRoute('app_candidat_account');
         }
 
-        return $this->render('account/candidat.html.twig', [
+        return $this->render('connexion/candidat.html.twig', [
             'form'=>$form->createView()
         ]);
     }

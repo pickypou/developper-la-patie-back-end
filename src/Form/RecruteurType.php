@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Recruteur;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,6 +15,9 @@ class RecruteurType extends AbstractType
         $builder
             ->add('username')
             ->add('address')
+            ->add('submit', SubmitType::class,[
+                'label'=>'Mettre à jour mes information'
+            ])
 
         ;
     }

@@ -1,23 +1,14 @@
-{% extends 'base.html.twig' %}
+{%extends 'base.html.twig'%}
 
-{% block title %}trt-mon compte{% endblock %}
 
-{% block body %}
-    <link rel="stylesheet" href="{{asset('assets/css/account.css')}}">
-    {%if app.user.candidat%}
-<h2>Bienvenue {{app.user.candidat.firstname}} sur votre espace personnel</h2>
-{%else%}
-    <h2>Bienvenue sur votre espace personnel</h2>
-{%endif%}
-{%if app.user.candidat%}
 
-    -voir toutes les annonces<br/>
-    -postuler a une annonce
+
+   {%block body%}
+
+    {%if app.user%}
+        <a href="{{ path('app_candidat_account')}}"></a>
     {%else%}
-        -<a href="{{path('app_profil_candidat')}}">compléter mon profil</a><br/>
-    -voir toutes les annonces<br/>
-    -postuler a une annonce
+        <a href="{{ path('app_recruteur_account')}}"></a>
     {%endif%}
-    <hr/>
-    <a href="{{path('app_logout')}}" class="btn btn-sm">Me deconnecter</a>
-{% endblock %}
+   {%endblock%}
+
