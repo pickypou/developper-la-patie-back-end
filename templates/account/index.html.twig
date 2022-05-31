@@ -4,9 +4,20 @@
 
 {% block body %}
     <link rel="stylesheet" href="{{asset('assets/css/account.css')}}">
-<h1>Bienvenue sur votre espace personnel</h1>
-    -<a href="{{path('app_profil_candidat')}}">compléter mon profil</a><br/>
-    -deposer mon cv<br/>
-    -voir toutes les annonces
-    postuler a une annonce
+    {%if app.user.candidat%}
+<h2>Bienvenue {{app.user.candidat.firstname}} sur votre espace personnel</h2>
+{%else%}
+    <h2>Bienvenue sur votre espace personnel</h2>
+{%endif%}
+{%if app.user.candidat%}
+
+    -voir toutes les annonces<br/>
+    -postuler a une annonce
+    {%else%}
+        -<a href="{{path('app_profil_candidat')}}">compléter mon profil</a><br/>
+    -voir toutes les annonces<br/>
+    -postuler a une annonce
+    {%endif%}
+    <hr/>
+    <a href="{{path('app_logout')}}" class="btn btn-sm">Me deconnecter</a>
 {% endblock %}

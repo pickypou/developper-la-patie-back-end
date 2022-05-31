@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}trt-mon compte<{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{asset('assets/css/account.css')}}">
+    <h1>Compléter mes informations</h1>
+    <a href="{{path('app_candidat_account')}}" class="btn btn-sm">Candidat</a>
+    <a href="{{path('app_recruteur_account')}}" class="btn btn-sm">Recruteur</a>
+
+
+
+{% endblock %}

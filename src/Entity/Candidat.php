@@ -13,18 +13,34 @@ class Candidat
     #[ORM\Column(type: 'integer')]
     private $id;
 
+    #[ORM\OneToOne(inversedBy: 'candidat', targetEntity: User::class, cascade: ['persist', 'remove'])]
+    #[ORM\JoinColumn(nullable: false)]
+    private $user;
+
     #[ORM\Column(type: 'string', length: 50)]
     private $firstname;
 
     #[ORM\Column(type: 'string', length: 50)]
-    private $lastname;
+    private $lastmane;
 
-    #[ORM\Column(type: 'blob')]
+    #[ORM\Column(type: 'string', length: 255)]
     private $cv;
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
     }
 
     public function getFirstname(): ?string
@@ -39,24 +55,24 @@ class Candidat
         return $this;
     }
 
-    public function getLastname(): ?string
+    public function getLastmane(): ?string
     {
-        return $this->lastname;
+        return $this->lastmane;
     }
 
-    public function setLastname(string $lastname): self
+    public function setLastmane(string $lastmane): self
     {
-        $this->lastname = $lastname;
+        $this->lastmane = $lastmane;
 
         return $this;
     }
 
-    public function getCv()
+    public function getCv(): ?string
     {
         return $this->cv;
     }
 
-    public function setCv($cv): self
+    public function setCv(string $cv): self
     {
         $this->cv = $cv;
 

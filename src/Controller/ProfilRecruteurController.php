@@ -2,9 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Candidat;
 use App\Entity\Recruteur;
-use App\Form\CandidatType;
 use App\Form\RecruteurType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,30 +10,28 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ProfilCandidatController extends AbstractController
+class ProfilRecruteurController extends AbstractController
 {
     private $entityManager;
     public function __construct(EntityManagerInterface $entityManager)
     {
-        $this->entityManager = $entityManager;
+        $this ->entityManager = $entityManager;
     }
-    #[Route('/candidat/profil', name: 'app_profil_candidat')]
+    #[Route('/profil/recruteur', name: 'app_profil_recruteur')]
     public function index(Request $request): Response
     {
-        $candidat = new Candidat();
-        $form = $this->createForm(CandidatType::class,$candidat);
+        $recruteur = new Recruteur();
+        $form = $this->createForm(RecruteurType::class, $recruteur);
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()){
-            $candidat->setUser($this->getUser());
-            $this->entityManager->persist($candidat);
-            $this->entityManager->flush();
-            $this->redirectToRoute('app_candidat_account');
-        }
+            $recruteur->setUser($this->getUser());
 
-        return $this->render('account/candidat.html.twig', [
+            $this->entityManager->persist($recruteur);
+            $this->entityManager->flush();
+            $this->redirectToRoute('app_recruteur_account');
+        }
+        return $this->render('account/recruteur.html.twig',[
             'form'=>$form->createView()
         ]);
     }
-
 }

@@ -25,6 +25,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string')]
     private $password;
 
+    #[ORM\OneToOne(mappedBy: 'user', targetEntity: Candidat::class, cascade: ['persist', 'remove'])]
+    private $candidat;
+
+    #[ORM\OneToOne(mappedBy: 'user', targetEntity: Recruteur::class, cascade: ['persist', 'remove'])]
+    private $recruteur;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -93,5 +99,44 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getCandidat(): ?Candidat
+    {
+        return $this->candidat;
+    }
+
+    public function setCandidat(Candidat $candidat): self
+    {
+        // set the owning side of the relation if necessary
+        if ($candidat->getUser() !== $this) {
+            $candidat->setUser($this);
+        }
+
+        $this->candidat = $candidat;
+
+        return $this;
+    }
+
+    public function getRecruteur(): ?Recruteur
+    {
+        return $this->recruteur;
+    }
+
+    public function setRecruteur(?Recruteur $recruteur): self
+    {
+        // unset the owning side of the relation if necessary
+        if ($recruteur === null && $this->recruteur !== null) {
+            $this->recruteur->setUser(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($recruteur !== null && $recruteur->getUser() !== $this) {
+            $recruteur->setUser($this);
+        }
+
+        $this->recruteur = $recruteur;
+
+        return $this;
     }
 }

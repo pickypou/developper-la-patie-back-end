@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Candidat;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -14,9 +15,16 @@ class CandidatType extends AbstractType
     {
         $builder
             ->add('firstname')
-            ->add('lastname')
-            ->add('cv')
-            ->add('submit',SubmitType::class)
+            ->add('lastmane')
+            ->add('cv', FileType::class,[
+                'label'=>'choisir un docomment'
+                ])
+            ->add('submit', SubmitType::class,[
+                'label'=>"Mettre a jour mes informations"
+            ])
+
+
+
         ;
     }
 
