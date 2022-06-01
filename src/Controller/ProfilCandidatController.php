@@ -25,20 +25,8 @@ class ProfilCandidatController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){
-            $cv = $form->getCv()->getData();
-            if ($cv){
-                $brochureFile = pathinfo($cv->getUser(),PATHINFO_FILENAME);
-                $newFilename = $brochureFile.'-'.uniqid().'.'.$brochureFile->guessExtension();
-                try {
-                    $cv->move(
-                        $this->getParameter('brochures_directory'),
-                        $newFilename
-                    );
-                } catch (FileException $e) {
-                    $cv->setCv($newFilename);
-                }
+            $candidat->setCv('');
 
-            }
 
             $candidat->setUser($this->getUser());
             $this->entityManager->persist($candidat);

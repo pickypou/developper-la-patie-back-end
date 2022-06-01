@@ -11,13 +11,14 @@ class AccountController extends AbstractController
     #[Route('/user', name: 'app_account')]
     public function Account(): Response
     {
-        if ($this->getUser()){
-            return $this->render('account/candidat.html.twig');
-        }else{
-            return $this->render('account/recruteur.html.twig');
+        if ($this->getUser()) {
+            return $this->redirectToRoute('app_candidat_account');
+        }
+        if ($this->getUser()) {
+            return $this->redirectToRoute('app_recruteur_account');
         }
 
-
+            return $this->render('account/index.html.twig');
     }
 
     #[Route('/user/compte', name: 'app_user_account')]
@@ -29,12 +30,14 @@ class AccountController extends AbstractController
     #[Route('/candidat/compte', name: 'app_candidat_account')]
     public function candidat(): Response
     {
+
         return $this->render('account/candidat.html.twig');
     }
 
     #[Route('/recruteur/compte', name: 'app_recruteur_account')]
     public function recruteur(): Response
     {
+
         return $this->render('account/recruteur.html.twig');
     }
 

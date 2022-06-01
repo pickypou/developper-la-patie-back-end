@@ -19,8 +19,6 @@ class Recruteur
     #[ORM\Column(type: 'string', length: 50)]
     private $username;
 
-    #[ORM\Column(type: 'string', length: 255)]
-    private $address;
 
     #[ORM\Column(type: 'string', length: 50)]
     private $street;
@@ -59,18 +57,6 @@ class Recruteur
     public function setUsername(string $username): self
     {
         $this->username = $username;
-
-        return $this;
-    }
-
-    public function getAddress(): ?string
-    {
-        return $this->address;
-    }
-
-    public function setAddress(string $address): self
-    {
-        $this->address = $address;
 
         return $this;
     }

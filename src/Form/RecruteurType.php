@@ -14,7 +14,10 @@ class RecruteurType extends AbstractType
     {
         $builder
             ->add('username')
-            ->add('address')
+            ->add('street')
+            ->add('number')
+            ->add('cities')
+            ->add('postal')
             ->add('submit', SubmitType::class,[
                 'label'=>'Mettre à jour mes information'
             ])
