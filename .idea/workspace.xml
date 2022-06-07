@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d50193-ddbc-452c-ae5d-cc3c37acd656" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/885669ea-7f46-4fc2-8193-6151ec8f16ba.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/885669ea-7f46-4fc2-8193-6151ec8f16ba.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AccountController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProfilCandidatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfilCandidatController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Recruteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Recruteur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CandidatType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CandidatType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RecruteurType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RecruteurType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthentificatorAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthentificatorAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/recruteur.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/recruteur.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +152,8 @@
       <workItem from="1654000932188" duration="9405000" />
       <workItem from="1654015808478" duration="24000" />
       <workItem from="1654054256042" duration="37000" />
-      <workItem from="1654054418214" duration="10711000" />
+      <workItem from="1654054418214" duration="11366000" />
+      <workItem from="1654085735281" duration="5068000" />
     </task>
     <servers />
   </component>

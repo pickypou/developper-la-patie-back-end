@@ -12,10 +12,10 @@
     {%endif%}
 
     {%if app.user.recruteur%}
-     -deposer une annonce
+        -<a href="{{path('app_annonce')}}">deposer une annonce<br/>
     {%else%}
         -<a href="{{path('app_profil_recruteur')}}">compléter mon profil</a><br/>
-        -deposer une annonce<br/>
+
     {%endif%}
 
     <hr/>

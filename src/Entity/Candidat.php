@@ -6,6 +6,7 @@ use App\Repository\CandidatRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CandidatRepository::class)]
+
 class Candidat
 {
     #[ORM\Id]
@@ -23,7 +24,7 @@ class Candidat
     #[ORM\Column(type: 'string', length: 50)]
     private $lastmane;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'string', nullable:true)]
     private $cv;
 
     public function getId(): ?int

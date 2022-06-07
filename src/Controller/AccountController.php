@@ -14,11 +14,11 @@ class AccountController extends AbstractController
         if ($this->getUser()) {
             return $this->redirectToRoute('app_candidat_account');
         }
-        if ($this->getUser()) {
+        else  {
             return $this->redirectToRoute('app_recruteur_account');
         }
 
-            return $this->render('account/index.html.twig');
+
     }
 
     #[Route('/user/compte', name: 'app_user_account')]

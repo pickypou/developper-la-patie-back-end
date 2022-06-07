@@ -23,6 +23,7 @@ class CandidatType extends AbstractType
                 'mapped' => false,
                 'constraints'=>[
                     new File([
+                    'maxSize' => '1024k',
                         'mimeTypes'=>[
                             'application/pdf',
                             'application/x-pdf',
